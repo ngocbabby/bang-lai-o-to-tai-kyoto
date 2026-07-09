@@ -8,20 +8,15 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
   <style>
-    :root{
-      --bg:#f4f6fb;--card:#fff;--ink:#172033;--muted:#6b7280;--blue:#2563eb;--green:#16a34a;--orange:#f59e0b;--red:#ef4444;--line:#e5e7eb;
-    }
+    :root{--bg:#f4f6fb;--card:#fff;--ink:#172033;--muted:#6b7280;--blue:#2563eb;--green:#16a34a;--orange:#f59e0b;--red:#ef4444;--line:#e5e7eb;}
     *{box-sizing:border-box}
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-    .wrap{max-width:920px;margin:0 auto;padding:16px}
-    .hero{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;border-radius:24px;padding:22px 18px;margin:8px 0 14px;box-shadow:0 12px 32px #0002;position:relative;overflow:hidden}
-    .hero:after{content:"🚗";position:absolute;right:16px;bottom:-14px;font-size:90px;opacity:.18;transform:rotate(-12deg)}
+    .wrap{max-width:920px;margin:0 auto;padding:16px}.hero{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;border-radius:24px;padding:22px 18px;margin:8px 0 14px;box-shadow:0 12px 32px #0002;position:relative;overflow:hidden}.hero:after{content:"🚗";position:absolute;right:16px;bottom:-14px;font-size:90px;opacity:.18;transform:rotate(-12deg)}
     h1{font-size:28px;line-height:1.12;margin:0 0 8px}.subtitle{margin:0;max-width:650px;color:#eef2ff}.pill{display:inline-flex;gap:6px;align-items:center;background:#ffffff22;border:1px solid #ffffff30;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;margin-bottom:10px}
     .section-title{font-size:20px;margin:18px 2px 10px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}@media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding:12px}h1{font-size:25px}}
     .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;text-decoration:none;color:inherit;box-shadow:0 4px 14px #0000000d;display:block;transition:.15s transform,.15s box-shadow}.card:active{transform:scale(.985)}.card.active{border-color:#bfdbfe;background:linear-gradient(180deg,#fff,#eff6ff)}
     .topline{display:flex;align-items:center;gap:10px;margin-bottom:8px}.icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;font-size:23px;background:#f3f4f6;flex:0 0 auto}.active .icon{background:#dbeafe}.card h3{font-size:18px;margin:0}.card p{margin:6px 0 0;color:var(--muted)}.badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800;margin-top:10px}.badge.go{background:#dcfce7;color:#166534}.badge.soon{background:#f3f4f6;color:#6b7280}.badge.need{background:#fef3c7;color:#92400e}
-    .quick{background:#fff7ed;border-left:6px solid var(--orange);border-radius:16px;padding:14px;margin:14px 0;border-top:1px solid #fed7aa;border-right:1px solid #fed7aa;border-bottom:1px solid #fed7aa}.quick b{color:#92400e}
-    .footer{color:var(--muted);font-size:13px;margin:20px 4px}.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.btn{display:inline-block;padding:10px 12px;border-radius:12px;background:#111827;color:#fff;text-decoration:none;font-weight:800}.btn.light{background:#fff;color:#1f2937;border:1px solid var(--line)}
+    .quick{background:#fff7ed;border-left:6px solid var(--orange);border-radius:16px;padding:14px;margin:14px 0;border-top:1px solid #fed7aa;border-right:1px solid #fed7aa;border-bottom:1px solid #fed7aa}.quick b{color:#92400e}.footer{color:var(--muted);font-size:13px;margin:20px 4px}.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.btn{display:inline-block;padding:10px 12px;border-radius:12px;background:#111827;color:#fff;text-decoration:none;font-weight:800}.btn.light{background:#fff;color:#1f2937;border:1px solid var(--line)}
   </style>
 </head>
 <body>
@@ -29,63 +24,21 @@
     <section class="hero">
       <div class="pill">📍 Kyoto · AT · sổ tay cá nhân</div>
       <h1>Bằng lái ô tô tại Kyoto</h1>
-      <p class="subtitle">Nơi gom toàn bộ thứ cần nhớ khi học lái: app, lịch học, cơm trưa, từ vựng, luyện đề, checklist thi. Bản đầu tiên ưu tiên dễ mở trên điện thoại.</p>
-      <div class="btnrow">
-        <a class="btn" href="huong-dan.html">Mở Hướng dẫn</a>
-        <a class="btn light" href="huong-dan-lai-xe.html">Mở Hướng dẫn lái xe</a>
-      </div>
+      <p class="subtitle">Nơi gom toàn bộ thứ cần nhớ khi học lái: app, lịch học, cơm trưa, từ vựng, luyện đề, checklist thi. Ưu tiên dễ mở trên điện thoại.</p>
+      <div class="btnrow"><a class="btn" href="tu-vung.html">Học từ vựng</a><a class="btn light" href="huong-dan-lai-xe.html">Mở Hướng dẫn lái xe</a></div>
     </section>
-
-    <div class="quick">
-      <b>Việc cần nhớ mỗi ngày:</b> sáng mở DrivIT2 xem lịch hôm nay; trước 16:00 đặt cơm ngày mai nếu cần; sau 17:00 check lại lịch ngày mai; rảnh thì xem N-LINE và làm Koka-sokutei.
-    </div>
-
+    <div class="quick"><b>Việc cần nhớ mỗi ngày:</b> sáng mở DrivIT2 xem lịch hôm nay; trước 16:00 đặt cơm ngày mai nếu cần; sau 17:00 check lại lịch ngày mai; trước buổi lái làm 10 câu quiz từ vựng.</div>
     <h2 id="muc-luc" class="section-title">Danh sách mục</h2>
     <section class="grid">
-      <a class="card active" href="huong-dan.html">
-        <div class="topline"><div class="icon">📘</div><h3>Hướng dẫn</h3></div>
-        <p>Giải thích DrivIT2, N-LINE, đặt bữa trưa, video online, Koka-sokutei và kyosyu-gembo.</p>
-        <span class="badge go">Đã có · bấm để mở</span>
-      </a>
-
-      <a class="card active" href="huong-dan-lai-xe.html">
-        <div class="topline"><div class="icon">🚗</div><h3>Hướng dẫn lái xe</h3></div>
-        <p>Các bước lái ô tô AT cho người mới: khởi hành, dừng xe, rẽ, giao lộ, đổi làn, lùi xe và câu thầy Nhật hay nói.</p>
-        <span class="badge go">Đã có · bấm để mở</span>
-      </a>
-
-      <div class="card">
-        <div class="topline"><div class="icon">📅</div><h3>Lịch học</h3></div>
-        <p>Sau này thêm nơi ghi lịch từng ngày, màu trên lịch, giờ nào học lái, giờ nào lý thuyết.</p>
-        <span class="badge soon">Sắp thêm</span>
-      </div>
-
-      <div class="card">
-        <div class="topline"><div class="icon">🗣️</div><h3>Từ vựng thực hành</h3></div>
-        <p>Các câu thầy hay nói khi lái: rẽ trái, dừng lại, nhìn gương, xi-nhan, phanh, tăng tốc.</p>
-        <span class="badge soon">Sắp thêm</span>
-      </div>
-
-      <div class="card">
-        <div class="topline"><div class="icon">✏️</div><h3>Koka-sokutei</h3></div>
-        <p>Theo dõi số lần luyện đề, điểm 90+, bộ câu hỏi khác nhau, chuẩn bị trước kỳ kiểm tra.</p>
-        <span class="badge need">Quan trọng</span>
-      </div>
-
-      <div class="card">
-        <div class="topline"><div class="icon">✅</div><h3>Checklist đi thi</h3></div>
-        <p>Giấy tờ, app, video đã xem, phiếu kyosyu-gembo, câu hỏi cần hỏi nhân viên.</p>
-        <span class="badge soon">Sắp thêm</span>
-      </div>
-
-      <div class="card">
-        <div class="topline"><div class="icon">🇯🇵</div><h3>Câu tiếng Nhật cần dùng</h3></div>
-        <p>Câu hỏi quầy lễ tân, hỏi thầy, đổi lịch, hỏi xe buýt, hỏi cơm trưa.</p>
-        <span class="badge soon">Sắp thêm</span>
-      </div>
+      <a class="card active" href="huong-dan.html"><div class="topline"><div class="icon">📘</div><h3>Hướng dẫn</h3></div><p>Giải thích DrivIT2, N-LINE, đặt bữa trưa, video online, Koka-sokutei và kyosyu-gembo.</p><span class="badge go">Đã có · bấm để mở</span></a>
+      <a class="card active" href="huong-dan-lai-xe.html"><div class="topline"><div class="icon">🚗</div><h3>Hướng dẫn lái xe</h3></div><p>Các bước lái ô tô AT cho người mới: khởi hành, dừng xe, rẽ, giao lộ, đổi làn, lùi xe và câu thầy Nhật hay nói.</p><span class="badge go">Đã có · bấm để mở</span></a>
+      <a class="card active" href="tu-vung.html"><div class="topline"><div class="icon">🗣️</div><h3>Từ vựng thực hành</h3></div><p>Flashcard + quiz từ vựng học lái: furigana trên Kanji, loa đọc tiếng Nhật, lưu tiến độ đã nhớ/cần ôn.</p><span class="badge go">Đã có · bấm để mở</span></a>
+      <div class="card"><div class="topline"><div class="icon">📅</div><h3>Lịch học</h3></div><p>Sau này thêm nơi ghi lịch từng ngày, màu trên lịch, giờ nào học lái, giờ nào lý thuyết.</p><span class="badge soon">Sắp thêm</span></div>
+      <div class="card"><div class="topline"><div class="icon">✏️</div><h3>Koka-sokutei</h3></div><p>Theo dõi số lần luyện đề, điểm 90+, bộ câu hỏi khác nhau, chuẩn bị trước kỳ kiểm tra.</p><span class="badge need">Quan trọng</span></div>
+      <div class="card"><div class="topline"><div class="icon">✅</div><h3>Checklist đi thi</h3></div><p>Giấy tờ, app, video đã xem, phiếu kyosyu-gembo, câu hỏi cần hỏi nhân viên.</p><span class="badge soon">Sắp thêm</span></div>
+      <div class="card"><div class="topline"><div class="icon">🇯🇵</div><h3>Câu tiếng Nhật cần dùng</h3></div><p>Câu hỏi quầy lễ tân, hỏi thầy, đổi lịch, hỏi xe buýt, hỏi cơm trưa.</p><span class="badge soon">Sắp thêm</span></div>
     </section>
-
-    <p class="footer">Bản demo 0.2 · đã có mục Hướng dẫn và Hướng dẫn lái xe.</p>
+    <p class="footer">Bản 0.3 · đã thêm mục Từ vựng thực hành có Flashcard, Quiz, Furigana và loa đọc.</p>
   </main>
 </body>
 </html>
