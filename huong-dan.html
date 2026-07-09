@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn nhanh 2 app học lái xe ở Nhật</title>
+<style>
+  :root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --ink:#1f2937;
+    --muted:#6b7280;
+    --blue:#2563eb;
+    --green:#16a34a;
+    --yellow:#f59e0b;
+    --red:#dc2626;
+    --line:#d1d5db;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:18px}
+  .hero{
+    background:linear-gradient(135deg,#2563eb,#14b8a6);
+    color:white;border-radius:22px;padding:22px;margin:8px 0 18px;
+    box-shadow:0 10px 30px #0002;
+  }
+  h1{font-size:28px;line-height:1.15;margin:0 0 10px}
+  h2{font-size:22px;margin:0 0 12px}
+  h3{font-size:18px;margin:0 0 8px}
+  p{margin:8px 0}
+  .card{
+    background:var(--card);border:1px solid #e5e7eb;border-radius:18px;
+    padding:16px;margin:14px 0;box-shadow:0 4px 14px #0000000d;
+  }
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}.wrap{padding:12px}h1{font-size:24px}}
+  .tag{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;font-size:13px;margin:2px 4px 2px 0}
+  .blue{background:#dbeafe;color:#1d4ed8}
+  .green{background:#dcfce7;color:#166534}
+  .yellow{background:#fef3c7;color:#92400e}
+  .red{background:#fee2e2;color:#991b1b}
+  .gray{background:#f3f4f6;color:#374151}
+  .todo{counter-reset:item}
+  .todo li{
+    list-style:none;margin:10px 0;padding:12px 12px 12px 46px;border-radius:14px;
+    background:#f9fafb;border:1px solid #e5e7eb;position:relative;
+  }
+  .todo li:before{
+    counter-increment:item;content:counter(item);
+    position:absolute;left:12px;top:12px;width:24px;height:24px;border-radius:50%;
+    background:var(--blue);color:white;text-align:center;line-height:24px;font-weight:800;
+  }
+  .warn{border-left:6px solid var(--red);background:#fff7ed}
+  .ok{border-left:6px solid var(--green);background:#f0fdf4}
+  .mock-phone{
+    width:190px;max-width:100%;border:10px solid #111827;border-radius:28px;background:#fff;
+    margin:auto;overflow:hidden;box-shadow:0 12px 25px #0002;
+  }
+  .phone-top{height:24px;background:#111827}
+  .phone-head{background:#f59e0b;color:white;font-weight:800;text-align:center;padding:8px}
+  .phone-body{padding:10px}
+  .btn{border-radius:12px;padding:9px;margin:7px 0;text-align:center;font-weight:800;border:1px solid #e5e7eb;background:#f3f4f6}
+  .slot{height:34px;border-radius:8px;margin:6px 0;padding:6px 8px;font-size:13px}
+  .drive{background:#fed7aa}
+  .nl{background:#bbf7d0}
+  .theory{background:#bfdbfe}
+  .exam{background:#fecaca}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .legend span{font-size:13px;padding:5px 8px;border-radius:10px}
+  .timeline{display:flex;align-items:stretch;gap:8px;overflow-x:auto;padding-bottom:6px}
+  .step{
+    min-width:150px;background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:12px;text-align:center;
+    position:relative;
+  }
+  .step strong{display:block;margin-bottom:6px;color:#111827}
+  .arrow{align-self:center;color:#9ca3af;font-size:26px;font-weight:900}
+  table{border-collapse:collapse;width:100%;font-size:15px}
+  th,td{border:1px solid #e5e7eb;padding:10px;text-align:left;vertical-align:top}
+  th{background:#f3f4f6}
+  .big{font-size:18px;font-weight:800}
+  .mini{font-size:13px;color:var(--muted)}
+  .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f3f4f6;border:1px solid #d1d5db;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>Hướng dẫn nhanh: 2 app học lái xe ở Nhật</h1>
+    <p>Hiểu đơn giản: <b>DrivIT2</b> để coi lịch, đặt cơm, luyện đề. <b>N-LINE</b> để xem video bài giảng online. Còn tờ <b>kyosyu-gembo</b> là giấy theo dõi, phải giữ kỹ và đưa giáo viên khi học.</p>
+  </section>
+
+  <section class="card ok">
+    <h2>Bây giờ bạn cần làm gì trước?</h2>
+    <ol class="todo">
+      <li><b>Mở DrivIT2</b> → kiểm tra lịch hôm nay và ngày mai. Lịch có thể đổi sau khoảng <b>17:00 hôm trước</b>, nên đừng chỉ tin tờ giấy.</li>
+      <li><b>Vào mục đặt bữa trưa</b> trong DrivIT2 nếu ngày mai cần ăn trưa. Hạn đặt thường là <b>16:00 ngày hôm trước</b>.</li>
+      <li><b>Mở N-LINE</b> → xem bài học online còn thiếu. Video thường xem được từ <b>05:00 đến 23:00</b>, mỗi bài khoảng <b>50 phút</b>.</li>
+      <li><b>Làm Koka-sokutei</b> trong DrivIT2/MUSASI: luyện đề viết giả. Cần đạt <b>90 điểm trở lên ít nhất 2 lần</b> với bộ câu hỏi khác nhau trước kỳ thi.</li>
+      <li><b>Giữ kyosyu-gembo</b>. Khi đến học hoặc bắt đầu buổi học, đưa cho giáo viên. Bạn không tự viết lung tung vào đó.</li>
+    </ol>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>App 1: DrivIT2</h2>
+      <span class="tag blue">Lịch học</span>
+      <span class="tag yellow">Đặt cơm</span>
+      <span class="tag red">Koka-sokutei</span>
+      <p>Dùng app này mỗi ngày để biết hôm nay học lúc mấy, có lái xe không, có lý thuyết không, có cần đặt cơm không.</p>
+      <div class="mock-phone" aria-label="Mô phỏng DrivIT2">
+        <div class="phone-top"></div>
+        <div class="phone-head">DrivIT2</div>
+        <div class="phone-body">
+          <div class="btn">📅 Lịch trình</div>
+          <div class="btn">🍱 Đặt bữa trưa</div>
+          <div class="btn">✏️ Koka-sokutei</div>
+          <div class="btn">🔔 Thông báo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>App 2: N-LINE</h2>
+      <span class="tag green">Video lý thuyết</span>
+      <span class="tag gray">AI kiểm tra</span>
+      <p>Dùng app này để xem video bài giảng. Không nên vừa xem vừa làm việc khác vì app có thể kiểm tra thái độ học.</p>
+      <div class="mock-phone" aria-label="Mô phỏng N-LINE">
+        <div class="phone-top"></div>
+        <div class="phone-head" style="background:#4f46e5">N-LINE</div>
+        <div class="phone-body">
+          <div class="btn">01 未視聴<br><span class="mini">chưa xem</span></div>
+          <div class="btn">02 視聴済<br><span class="mini">đã xem</span></div>
+          <div class="btn">11 対面<br><span class="mini">học trực tiếp</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Quy trình từ nhập học đến lấy bằng</h2>
+    <div class="timeline">
+      <div class="step"><strong>Giai đoạn 1</strong>AT lái tối thiểu 12 giờ + học lý thuyết 1–10</div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Thi tạm thời</strong>Syuuryo-kentei + kiểm tra viết 50 câu</div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Nhận giấy phép tạm</strong>Qua thì học tiếp giai đoạn 2</div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Giai đoạn 2</strong>AT lái tối thiểu 19 giờ + lý thuyết 1–16</div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Thi tốt nghiệp</strong>Sotsugyo-kentei, lái ngoài đường công cộng</div>
+      <div class="arrow">→</div>
+      <div class="step"><strong>Thi ở nơi bạn sống</strong>Đậu bài thi học thuật thì nhận bằng lái</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Màu trên lịch DrivIT2 nghĩa là gì?</h2>
+    <div class="legend">
+      <span class="drive">Cam: tập lái xe</span>
+      <span class="theory">Xanh dương: giai đoạn 1 / học trực tiếp</span>
+      <span class="nl">Xanh lá: giai đoạn 2 / học trực tiếp</span>
+      <span class="exam">Đỏ: kiểm tra lái xe / khoa kiểm tra</span>
+    </div>
+    <table>
+      <tr><th>Trên lịch thấy</th><th>Nên hiểu là</th></tr>
+      <tr><td><b>教習</b></td><td>Buổi học/thực hành lái xe.</td></tr>
+      <tr><td><b>学科</b></td><td>Lý thuyết.</td></tr>
+      <tr><td><b>技能</b></td><td>Kỹ năng lái xe thực hành.</td></tr>
+      <tr><td><b>弁</b></td><td>Cơm trưa/bữa trưa đã đặt hoặc cần dùng.</td></tr>
+      <tr><td><b>検定</b></td><td>Kiểm tra/thi.</td></tr>
+    </table>
+  </section>
+
+  <section class="card warn">
+    <h2>Những lỗi dễ làm bị hoãn thi</h2>
+    <p><span class="big">1.</span> Không xem đủ video N-LINE trước ngày kiểm tra.</p>
+    <p><span class="big">2.</span> Không làm đủ Koka-sokutei: cần <b>90 điểm trở lên ít nhất 2 lần</b>, đổi bộ câu hỏi.</p>
+    <p><span class="big">3.</span> Không kiểm tra lịch mới sau 17:00 hôm trước.</p>
+    <p><span class="big">4.</span> Quên kyosyu-gembo hoặc làm mất giấy này.</p>
+  </section>
+
+  <section class="card">
+    <h2>Checklist mỗi ngày</h2>
+    <table>
+      <tr><th>Thời điểm</th><th>Làm gì</th></tr>
+      <tr><td>Sáng</td><td>Mở DrivIT2 kiểm tra lịch hôm nay. Chụp màn hình lại cho chắc.</td></tr>
+      <tr><td>Trước 16:00</td><td>Đặt cơm trưa cho ngày mai nếu cần.</td></tr>
+      <tr><td>Sau 17:00</td><td>Kiểm tra lịch ngày mai vì trường có thể đổi lịch.</td></tr>
+      <tr><td>Khi rảnh</td><td>Xem N-LINE, làm Koka-sokutei, ghi nhớ bài nào đã xong.</td></tr>
+      <tr><td>Trước khi vào học</td><td>Mang kyosyu-gembo, giấy tờ, điện thoại đủ pin.</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Câu tiếng Nhật dùng ngay</h2>
+    <p><b>今日のスケジュールを確認したいです。</b><br>Em muốn kiểm tra lịch hôm nay.</p>
+    <p><b>明日の昼ごはんを予約したいです。</b><br>Em muốn đặt cơm trưa ngày mai.</p>
+    <p><b>N-LINEの動画は全部見たほうがいいですか？</b><br>Em có cần xem hết video N-LINE không ạ?</p>
+    <p><b>教習原簿はどこでもらえますか？</b><br>Em nhận phiếu kyosyu-gembo ở đâu ạ?</p>
+  </section>
+</div>
+</body>
+</html>
