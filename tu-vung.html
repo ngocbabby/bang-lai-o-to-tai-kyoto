@@ -1,1 +1,207 @@
-<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Từ vựng học lái xe</title><link rel="icon" href="assets/icon.svg" type="image/svg+xml"><style>:root{--bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#667085;--blue:#2563eb;--green:#16a34a;--orange:#f59e0b;--red:#dc2626;--line:#e5e7eb}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;line-height:1.6}.wrap{max-width:980px;margin:auto;padding:12px}.hero{background:linear-gradient(135deg,#1d4ed8,#0f766e);color:#fff;border-radius:24px;padding:20px;margin:6px 0 12px;box-shadow:0 12px 30px #0002}a{color:inherit}.back{font-weight:800;text-decoration:none;color:#dbeafe}h1{font-size:27px;line-height:1.15;margin:10px 0 6px}h2{margin:0 0 10px;font-size:21px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin:12px 0;box-shadow:0 4px 14px #0000000d}.tabs{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;background:#f5f7fbee;padding:8px 0;backdrop-filter:blur(8px)}.tabs a,.btn{border:0;border-radius:999px;padding:10px 12px;background:#111827;color:#fff;text-decoration:none;font-weight:900;white-space:nowrap}.btn{cursor:pointer}.btn2{background:#fff;color:#111827;border:1px solid var(--line)}.blue{background:#2563eb}.green{background:#16a34a}.orange{background:#f59e0b;color:#111827}.red{background:#dc2626}.row{display:flex;gap:8px;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stat{text-align:center}.stat b{display:block;font-size:22px}@media(max-width:650px){.stats{grid-template-columns:repeat(2,1fr)}}input,select{width:100%;border:1px solid var(--line);border-radius:14px;padding:11px;background:#fff}.tools{display:grid;grid-template-columns:1fr 170px 130px;gap:8px}@media(max-width:760px){.tools{grid-template-columns:1fr}}ruby{ruby-position:over;line-height:2.05}rt{font-size:.58em;color:#64748b;font-weight:800}.jp{font-size:42px;font-weight:950;text-align:center;line-height:1.6;word-break:keep-all}.vi{font-size:22px;font-weight:900;text-align:center}.muted{color:var(--muted)}.flash{min-height:280px;display:grid;place-items:center}.tag{display:inline-block;background:#eef2ff;color:#1d4ed8;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:900;margin:2px}.list{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}@media(max-width:760px){.list{grid-template-columns:1fr}}.item{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:start;border:1px solid var(--line);border-radius:15px;padding:10px;background:#fff}.item .j{font-weight:950;font-size:20px}.audio{border:1px solid #bfdbfe;background:#eff6ff;border-radius:12px;padding:8px;cursor:pointer}.choice{width:100%;text-align:left;margin:6px 0;border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;font-weight:850}.correct{background:#dcfce7!important;color:#166534}.wrong{background:#fee2e2!important;color:#991b1b}.bar{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#2563eb,#16a34a)}.src{border-left:6px solid var(--orange);background:#fffbeb}.top{position:fixed;right:12px;bottom:12px;background:#111827;color:#fff;border-radius:999px;padding:9px 12px;text-decoration:none;font-weight:900}</style></head><body><main class="wrap" id="top"><section class="hero"><a class="back" href="index.html">← Về Home</a><h1>Từ vựng học lái xe ô tô ở Nhật</h1><p>Flashcard + quiz, Kanji có furigana trên đầu, có loa đọc tiếng Nhật. Loa chỉ đọc từ/câu Nhật trong dữ liệu, không đọc furigana và không đọc ghi chú tiếng Việt.</p></section><nav class="tabs"><a href="#flash">Flashcard</a><a href="#quiz">Quiz</a><a href="#list">Danh sách</a><a href="#source">Nguồn</a></nav><section class="stats"><div class="card stat"><b id="total">0</b>Tổng</div><div class="card stat"><b id="known">0</b>Đã nhớ</div><div class="card stat"><b id="review">0</b>Cần ôn</div><div class="card stat"><b id="best">0%</b>Quiz tốt nhất</div></section><section class="card" id="flash"><h2>Flashcard</h2><div class="tools"><input id="q" placeholder="Tìm: phanh, rẽ trái, 発進..."><select id="cat"></select><select id="mode"><option value="all">Tất cả</option><option value="new">Chưa nhớ</option><option value="review">Cần ôn</option><option value="known">Đã nhớ</option></select></div><div class="card flash" id="card"><div><p><span class="tag" id="pos">0/0</span><span class="tag" id="st">Đang học</span></p><div class="jp" id="jp"></div><div class="vi" id="vi" hidden></div><p class="muted" id="hint">Bấm lật thẻ để xem nghĩa.</p><div class="row" style="justify-content:center"><button class="btn blue" id="speak">🔊 Nghe</button><button class="btn btn2" id="flip">Lật thẻ</button></div></div></div><div class="row"><button class="btn btn2" id="prev">← Trước</button><button class="btn btn2" id="next">Sau →</button><button class="btn green" id="ok">✅ Đã nhớ</button><button class="btn orange" id="hard">⭐ Cần ôn</button><button class="btn red" id="reset">Xóa tiến độ</button></div></section><section class="card" id="quiz"><h2>Quiz 10 câu</h2><p class="muted">Sai câu nào tự chuyển vào nhóm Cần ôn.</p><div class="tools"><select id="qcat"></select><select id="qtype"><option value="vi">Nhật → nghĩa Việt</option><option value="jp">Việt → tiếng Nhật</option><option value="mix">Trộn 2 chiều</option></select><button class="btn blue" id="start">Bắt đầu</button></div><p><span class="tag" id="score">Điểm: 0/0</span></p><div class="bar"><span id="bar"></span></div><div class="card" id="quizbox"><p class="muted">Bấm Bắt đầu để làm quiz.</p></div></section><section class="card" id="list"><h2>Danh sách</h2><div class="list" id="items"></div></section><section class="card src" id="source"><h2>Nguồn</h2><p>Dữ liệu dựa trên 2 PDF: <b>“từ vựng khi học thực hành cùng thầy.pdf”</b> và <b>“CÁC TỪ VỰNG HAY DÙNG TRONG KHI HỌC LÁI XE Ô TÔ.pdf”</b>.</p><p>Đã sửa vài chữ dễ học sai: プレーキ → ブレーキ, ウインか → ウインカー, 報道 → 歩道, ドラーミラ/サイトミラー → ドアミラー/サイドミラー, ハンドルプレーき → ハンドブレーキ, ベッパー・ロック → ベーパー・ロック.</p></section></main><a class="top" href="#top">↑</a><script>const V=[["始めましょう","","Bắt đầu nào","Câu thầy hay nói","始めましょう"],["発進","はっしん","Xuất phát","Thao tác","発進"],["停止","ていし","Dừng xe","Thao tác","停止"],["徐行","じょこう","Đi chậm, sẵn sàng dừng ngay","Thao tác","徐行"],["左折","させつ","Rẽ trái","Thao tác","左折"],["右折","うせつ","Rẽ phải","Thao tác","右折"],["転回","てんかい","Quay đầu xe","Thao tác","転回"],["切り返し","きりかえし","Chỉnh lại xe bằng tiến/lùi","Thao tác","切り返し"],["後退","こうたい","Lùi xe","Thao tác","後退"],["やりすごす","","Nhường cho xe khác đi trước","Thao tác","やりすごす"],["アクセルを踏む","アクセルをふむ","Nhấn ga","Thao tác","アクセルを踏む"],["ブレーキをかける","","Đạp phanh","Thao tác","ブレーキをかける"],["エンジンをかける","","Khởi động động cơ","Thao tác","エンジンをかける"],["ワイパーを動かす","ワイパーをうごかす","Bật/cử động cần gạt nước","Thao tác","ワイパーを動かす"],["D","ドライブ","Số tiến","Cần số/phanh","ドライブ"],["R","リバース","Số lùi","Cần số/phanh","リバース"],["P","パーキング","Số đỗ xe","Cần số/phanh","パーキング"],["N","ニュートラル","Số mo/trạng thái tự nhiên","Cần số/phanh","ニュートラル"],["2","セカンドギア","Số 2 khi xuống dốc dài","Cần số/phanh","セカンドギア"],["L","ローギア","Số L khi xuống dốc dài","Cần số/phanh","ローギア"],["シフト","","Cần số","Cần số/phanh","シフト"],["変速","へんそく","Đổi số","Cần số/phanh","変速"],["アクセルペダル","","Bàn đạp ga","Cần số/phanh","アクセルペダル"],["ブレーキペダル","","Bàn đạp phanh","Cần số/phanh","ブレーキペダル"],["ハンドブレーキ","","Phanh tay/phanh đỗ","Cần số/phanh","ハンドブレーキ"],["フットブレーキ","","Phanh chân","Cần số/phanh","フットブレーキ"],["エンジンブレーキ","","Phanh động cơ","Cần số/phanh","エンジンブレーキ"],["急ブレーキ","きゅうブレーキ","Phanh gấp","Cần số/phanh","急ブレーキ"],["非常ブレーキ","ひじょうブレーキ","Phanh khẩn cấp","Cần số/phanh","非常ブレーキ"],["ポンピングブレーキ","","Nhấp phanh nhiều lần","Cần số/phanh","ポンピングブレーキ"],["鍵","かぎ","Chìa khóa/khóa cửa","Bộ phận xe","鍵"],["ハンドル","","Vô lăng","Bộ phận xe","ハンドル"],["ハンドルを切る","ハンドルをきる","Đánh lái/xoay vô lăng","Bộ phận xe","ハンドルを切る"],["バックミラー","","Gương chiếu hậu trong xe","Bộ phận xe","バックミラー"],["ドアミラー","","Gương chiếu hậu hai bên","Bộ phận xe","ドアミラー"],["サイドミラー","","Gương bên ngoài xe","Bộ phận xe","サイドミラー"],["ウインカー","","Xi-nhan","Bộ phận xe","ウインカー"],["合図","あいず","Tín hiệu/xi-nhan","Bộ phận xe","合図"],["ブレーキランプ","","Đèn phanh","Bộ phận xe","ブレーキランプ"],["テールライト","","Đèn hậu","Bộ phận xe","テールライト"],["ヘッドライト","","Đèn pha/đèn trước","Bộ phận xe","ヘッドライト"],["ワイパー","","Cần gạt nước","Bộ phận xe","ワイパー"],["シートベルト","","Dây an toàn","Bộ phận xe","シートベルト"],["タイヤ","","Lốp xe","Bộ phận xe","タイヤ"],["車輪","しゃりん","Bánh xe","Bộ phận xe","車輪"],["ボンネット","","Nắp capo/nắp trước","Bộ phận xe","ボンネット"],["車体感覚","しゃたいかんかく","Cảm giác thân xe/kích thước xe","Bộ phận xe","車体感覚"],["速度計","そくどけい","Đồng hồ tốc độ","Bộ phận xe","速度計"],["警音器","けいおんき","Còi xe","Bộ phận xe","警音器"],["クラクション","","Còi xe","Bộ phận xe","クラクション"],["対向車線","たいこうしゃせん","Làn ngược chiều","Đường/sân tập","対向車線"],["対向車","たいこうしゃ","Xe ngược chiều","Đường/sân tập","対向車"],["優先道路","ゆうせんどうろ","Đường ưu tiên","Đường/sân tập","優先道路"],["車道","しゃどう","Đường cho xe chạy","Đường/sân tập","車道"],["歩道","ほどう","Vỉa hè","Đường/sân tập","歩道"],["路側帯","ろそくたい","Lề đường/dải bên đường","Đường/sân tập","路側帯"],["停止線","ていしせん","Vạch dừng xe","Đường/sân tập","停止線"],["破線","はせん","Vạch đứt quãng","Đường/sân tập","破線"],["センターライン","","Vạch trung tâm","Đường/sân tập","センターライン"],["縁石","えんせき","Đá lề đường","Đường/sân tập","縁石"],["坂道","さかみち","Đường dốc","Đường/sân tập","坂道"],["狭路","きょうろ","Đường hẹp","Đường/sân tập","狭路"],["外周","がいしゅう","Vòng ngoài sân tập","Đường/sân tập","外周"],["待避所","たいひじょ","Chỗ tránh xe","Đường/sân tập","待避所"],["踏切","ふみきり","Chắn tàu/đường ngang tàu","Đường/sân tập","踏切"],["信号","しんごう","Đèn tín hiệu","Đường/sân tập","信号"],["ポール","","Cột mốc","Đường/sân tập","ポール"],["目視","もくし","Quay đầu nhìn/xác nhận bằng mắt","Quan sát/an toàn","目視"],["死角","しかく","Góc chết/điểm mù","Quan sát/an toàn","死角"],["前方","ぜんぽう","Phía trước","Quan sát/an toàn","前方"],["後方","こうほう","Phía sau","Quan sát/an toàn","後方"],["左右","さゆう","Trái phải/hai bên","Quan sát/an toàn","左右"],["側方","そくほう","Phía bên trái/phải","Quan sát/an toàn","側方"],["横断","おうだん","Băng qua đường","Quan sát/an toàn","横断"],["歩行者","ほこうしゃ","Người đi bộ","Quan sát/an toàn","歩行者"],["軽車両","けいしゃりょう","Phương tiện nhẹ như xe đạp","Quan sát/an toàn","軽車両"],["内輪差","ないりんさ","Độ lệch bánh trong khi rẽ","Quan sát/an toàn","内輪差"],["外輪差","がいりんさ","Độ lệch bánh ngoài khi lùi/rẽ","Quan sát/an toàn","外輪差"],["時機を捉える","じきをとらえる","Nắm thời điểm thích hợp","Quan sát/an toàn","時機を捉える"],["免許証不携帯","めんきょしょうふけいたい","Không mang bằng lái khi lái xe","Luật/thi","免許証不携帯"],["無免許運転","むめんきょうんてん","Lái xe không có bằng","Luật/thi","無免許運転"],["減点","げんてん","Bị trừ điểm","Luật/thi","減点"],["学科試験","がっかしけん","Kỳ thi lý thuyết","Luật/thi","学科試験"],["技能試験","ぎのうしけん","Kỳ thi thực hành","Luật/thi","技能試験"],["卒業検定","そつぎょうけんてい","Kỳ thi tốt nghiệp","Luật/thi","卒業検定"],["効果測定","こうかそくてい","Kiểm tra đo hiệu quả học/luyện đề","Luật/thi","効果測定"],["欠格期間","けっかくきかん","Thời gian không được lấy lại bằng","Luật/thi","欠格期間"],["免許取り消し","めんきょとりけし","Bị tước/hủy bằng lái","Luật/thi","免許取り消し"],["エンストする","","Chết máy","Hiện tượng xe","エンストする"],["クリープ現象","クリープげんしょう","Xe AT tự bò khi nhả phanh","Hiện tượng xe","クリープ現象"],["フェード現象","フェードげんしょう","Phanh giảm tác dụng do quá nóng","Hiện tượng xe","フェード現象"],["ベーパー・ロック現象","ベーパーロックげんしょう","Tạo bọt trong dầu phanh","Hiện tượng xe","ベーパー・ロック現象"],["スタンディングウェーブ現象","スタンディングウェーブげんしょう","Hỏng lốp do chạy nhanh khi lốp non","Hiện tượng xe","スタンディングウェーブ現象"],["発進してください","はっしんしてください","Hãy xuất phát","Câu thầy hay nói","発進してください"],["停止してください","ていししてください","Hãy dừng xe","Câu thầy hay nói","停止してください"],["左折してください","させつしてください","Hãy rẽ trái","Câu thầy hay nói","左折してください"],["右折してください","うせつしてください","Hãy rẽ phải","Câu thầy hay nói","右折してください"],["合図を出してください","あいずをだしてください","Hãy bật xi-nhan","Câu thầy hay nói","合図を出してください"],["目視してください","もくししてください","Hãy quay đầu nhìn","Câu thầy hay nói","目視してください"],["バックミラーで確認してください","バックミラーでかくにんしてください","Hãy kiểm tra bằng gương chiếu hậu","Câu thầy hay nói","バックミラーで確認してください"],["後方を確認してください","こうほうをかくにんしてください","Hãy kiểm tra phía sau","Câu thầy hay nói","後方を確認してください"]];const $=id=>document.getElementById(id),K='driveVocabMiniV1';let P=JSON.parse(localStorage.getItem(K)||'{"known":{},"review":{},"best":0}'),F=[...V],i=0,show=false,Q={on:false,arr:[],i:0,score:0,ans:false};const cats=[...new Set(V.map(x=>x[3]))];function save(){localStorage.setItem(K,JSON.stringify(P));stats()}function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}function rb(x){return x[1]?`<ruby>${esc(x[0])}<rt>${esc(x[1])}</rt></ruby>`:esc(x[0])}function speak(x){if(!('speechSynthesis'in window))return alert('Máy này chưa hỗ trợ đọc. Thử Chrome/Safari.');speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(x[4]||x[0]);u.lang='ja-JP';u.rate=.82;let v=speechSynthesis.getVoices().find(v=>/ja|Japan|Kyoko|Otoya/i.test(v.lang+' '+v.name));if(v)u.voice=v;speechSynthesis.speak(u)}function state(x){return P.known[x[0]]?'known':P.review[x[0]]?'review':'new'}function label(x){return state(x)=='known'?'Đã nhớ':state(x)=='review'?'Cần ôn':'Đang học'}function stats(){$('total').textContent=V.length;$('known').textContent=Object.keys(P.known).length;$('review').textContent=Object.keys(P.review).length;$('best').textContent=Math.round(P.best||0)+'%'}function initSel(){let o='<option value="all">Tất cả nhóm</option>'+cats.map(c=>`<option>${esc(c)}</option>`).join('');$('cat').innerHTML=o;$('qcat').innerHTML=o}function filter(){let q=$('q').value.toLowerCase().trim(),c=$('cat').value,m=$('mode').value;F=V.filter(x=>(!q||x.join(' ').toLowerCase().includes(q))&&(c=='all'||x[3]==c)&&(m=='all'||state(x)==m));i=0;show=false;card();list()}function card(){if(!F.length){$('jp').textContent='Không thấy';$('vi').hidden=false;$('vi').textContent='Đổi bộ lọc nhé';return}let x=F[i];$('pos').textContent=(i+1)+'/'+F.length;$('st').textContent=label(x);$('jp').innerHTML=rb(x);$('vi').hidden=!show;$('vi').textContent=x[2];$('hint').textContent=show?x[3]:'Bấm lật thẻ để xem nghĩa.'}function list(){$('items').innerHTML=F.map((x,n)=>`<div class="item"><div><div class="j">${rb(x)}</div><b>${esc(x[2])}</b><p><span class="tag">${esc(x[3])}</span><span class="tag">${label(x)}</span></p></div><button class="audio" data-n="${n}">🔊</button></div>`).join('')||'<p class="muted">Không có từ.</p>';document.querySelectorAll('[data-n]').forEach(b=>b.onclick=e=>speak(F[+b.dataset.n]))}function mark(t){let x=F[i];if(!x)return;if(t=='known'){P.known[x[0]]=1;delete P.review[x[0]]}else{P.review[x[0]]=1;delete P.known[x[0]]}save();card();list()}function sh(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}function start(){let c=$('qcat').value,p=V.filter(x=>c=='all'||x[3]==c);if(p.length<4)return alert('Nhóm này ít hơn 4 từ.');Q={on:true,arr:sh(p).slice(0,10),i:0,score:0,ans:false};quiz()}function quiz(){let box=$('quizbox');if(Q.i>=Q.arr.length){let pc=Math.round(Q.score/Q.arr.length*100);if(pc>P.best){P.best=pc;save()}$('score').textContent=`Điểm: ${Q.score}/${Q.arr.length}`;$('bar').style.width='100%';box.innerHTML=`<h3>Xong: ${Q.score}/${Q.arr.length} (${pc}%)</h3><button class="btn blue" onclick="start()">Làm lại</button>`;return}let x=Q.arr[Q.i],type=$('qtype').value;if(type=='mix')type=Math.random()<.5?'vi':'jp';let ch=sh([x,...sh(V.filter(y=>y!==x)).slice(0,3)]);$('score').textContent=`Điểm: ${Q.score}/${Q.i}`;$('bar').style.width=Q.i/Q.arr.length*100+'%';box.innerHTML=`<p><span class="tag">Câu ${Q.i+1}/${Q.arr.length}</span><span class="tag">${esc(x[3])}</span></p><div class="jp">${type=='vi'?rb(x):esc(x[2])}</div><p style="text-align:center"><button class="btn btn2" id="qs">🔊 Nghe</button></p>${ch.map(y=>`<button class="choice" data-a="${esc(y[0])}">${type=='vi'?esc(y[2]):rb(y)}</button>`).join('')}<p id="ex" class="muted"></p>`;$('qs').onclick=()=>speak(x);document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>ans(b,x))}function ans(b,x){if(Q.ans)return;Q.ans=true;let ok=b.dataset.a==x[0];document.querySelectorAll('.choice').forEach(c=>{if(c.dataset.a==x[0])c.classList.add('correct');else if(c==b)c.classList.add('wrong');c.disabled=true});if(ok)Q.score++;else{P.review[x[0]]=1;delete P.known[x[0]];save()}$('ex').innerHTML=(ok?'Đúng. ':'Sai, đưa vào Cần ôn. ')+'Đáp án: <b>'+rb(x)+'</b> - '+esc(x[2]);setTimeout(()=>{Q.i++;Q.ans=false;quiz()},ok?800:1700)}initSel();stats();filter();$('q').oninput=filter;$('cat').onchange=filter;$('mode').onchange=filter;$('card').onclick=e=>{if(e.target.tagName!='BUTTON'){show=!show;card()}};$('flip').onclick=()=>{show=!show;card()};$('speak').onclick=()=>speak(F[i]);$('prev').onclick=()=>{i=(i-1+F.length)%F.length;show=false;card()};$('next').onclick=()=>{i=(i+1)%F.length;show=false;card()};$('ok').onclick=()=>mark('known');$('hard').onclick=()=>mark('review');$('reset').onclick=()=>{if(confirm('Xóa tiến độ?')){P={known:{},review:{},best:0};save();filter()}};$('start').onclick=start;speechSynthesis&&speechSynthesis.getVoices();</script></body></html>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b6b57">
+  <title>Học từ vựng lái xe Nhật - Việt</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <style>
+    :root{--bg:#f5f8f7;--card:#fff;--ink:#17211e;--muted:#66736f;--green:#0b6b57;--green2:#0f8b70;--pale:#e7f5f0;--line:#dce7e3;--orange:#f59e0b;--shadow:0 12px 30px rgba(16,57,46,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#e9f6f1 0,#f5f8f7 260px);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP","Hiragino Kaku Gothic ProN",Meiryo,sans-serif}
+    button,select,input{font:inherit}button{touch-action:manipulation}.wrap{width:min(820px,100%);margin:auto;padding:18px 14px 48px}.hero{padding:14px 4px 18px}.backlink{display:inline-flex;align-items:center;min-height:40px;color:var(--green);font-weight:800;text-decoration:none}.eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}h1{font-size:clamp(26px,7vw,40px);line-height:1.12;margin:8px 0}.subtitle{margin:0;color:var(--muted);line-height:1.55}.tabs{position:sticky;top:0;z-index:10;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px;background:rgba(245,248,247,.92);backdrop-filter:blur(12px);border:1px solid rgba(220,231,227,.9);border-radius:16px}.tab{border:0;border-radius:12px;padding:12px 10px;background:transparent;color:var(--muted);font-weight:800}.tab.active{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(11,107,87,.25)}.panel{display:none;padding-top:16px}.panel.active{display:block}.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow)}.toolbar{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-bottom:12px}.select,.search{width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 12px;color:var(--ink)}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:12px;min-width:46px;min-height:46px;font-size:20px}.progress-row{display:flex;align-items:center;gap:10px;margin:10px 2px 14px}.bar{height:9px;flex:1;border-radius:99px;background:#e7eeeb;overflow:hidden}.bar>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),#39b992);transition:width .25s}.progress-text{font-size:13px;color:var(--muted);white-space:nowrap}.scene{perspective:1200px}.flashcard{position:relative;width:100%;height:min(56vh,430px);min-height:340px;border:0;background:transparent;padding:0;cursor:pointer}.card-inner{position:absolute;inset:0;transition:transform .5s cubic-bezier(.2,.75,.2,1);transform-style:preserve-3d}.flashcard.flipped .card-inner{transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9)}.front{background:linear-gradient(145deg,#0b6b57,#0e8b70);color:#fff}.back{background:#fff;transform:rotateY(180deg);border-color:var(--line)}.badge{position:absolute;top:18px;left:18px;right:18px;font-size:12px;line-height:1.35;font-weight:750;opacity:.78}.jp{font-size:clamp(34px,10vw,60px);line-height:1.5;font-weight:800;word-break:keep-all}.back .jp{color:var(--green);font-size:clamp(30px,8vw,50px)}ruby{ruby-position:over}rt{font-size:.42em;font-weight:650;letter-spacing:.04em}.meaning{font-size:clamp(21px,5.8vw,30px);font-weight:750;line-height:1.35;margin-top:16px}.hint{position:absolute;bottom:18px;font-size:13px;opacity:.75}.speaker{margin-top:18px;border:0;background:var(--pale);color:var(--green);border-radius:99px;padding:11px 18px;font-weight:800}.controls{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:9px;margin-top:12px}.control{min-height:50px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:800;color:var(--ink)}.learn{background:#fff8e7;border-color:#f7d77e;color:#8a5a00}.learn.done{background:var(--green);border-color:var(--green);color:#fff}.small-note{font-size:13px;color:var(--muted);line-height:1.5;margin:12px 4px 0}.list-head{display:grid;gap:10px;margin-bottom:14px}.summary{font-size:14px;color:var(--muted)}.section{margin:0 0 15px}.section-title{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:0;padding:13px 14px;background:var(--pale);color:var(--green);border-radius:14px;font-size:16px;line-height:1.4}.count{font-size:12px;background:#fff;border-radius:99px;padding:4px 8px;white-space:nowrap}.vocab-list{list-style:none;margin:7px 0 0;padding:0}.vocab-item{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:14px 7px;border-bottom:1px solid var(--line)}.vocab-item:last-child{border-bottom:0}.term{font-size:22px;font-weight:800;line-height:1.55}.vi{font-size:15px;color:var(--muted);line-height:1.4;margin-top:2px}.play{width:44px;height:44px;border:0;border-radius:50%;background:var(--pale);color:var(--green);font-size:19px}.empty{text-align:center;color:var(--muted);padding:34px 10px}.topbtn{position:fixed;right:16px;bottom:18px;width:46px;height:46px;border:0;border-radius:50%;background:var(--green);color:#fff;box-shadow:var(--shadow);display:none}.topbtn.show{display:block}@media (min-width:620px){.wrap{padding-top:28px}.box{padding:20px}.list-head{grid-template-columns:1fr 1fr;align-items:center}.summary{text-align:right}}
+    @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.card-inner{transition:none}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero"><a class="backlink" href="index.html">← Về trang chính</a><div class="eyebrow">Nhật - Việt • Lái xe ô tô</div><h1>Học từ vựng lái xe</h1><p class="subtitle">Flashcard có furigana, tự đọc tiếng Nhật và danh sách được chia theo từng phần trong tài liệu.</p></header>
+    <nav class="tabs" aria-label="Chọn phần"><button class="tab active" data-tab="cards">1. Flashcard</button><button class="tab" data-tab="list">2. Danh sách</button></nav>
+
+    <section id="cards" class="panel active">
+      <div class="box">
+        <div class="toolbar"><select id="cardSection" class="select" aria-label="Chọn nhóm từ"></select><button id="shuffle" class="iconbtn" title="Trộn thẻ" aria-label="Trộn thẻ">🔀</button></div>
+        <div class="progress-row"><div class="bar"><i id="progressBar"></i></div><span id="progressText" class="progress-text"></span></div>
+        <div class="scene">
+          <button id="flashcard" class="flashcard" aria-label="Lật thẻ">
+            <span class="card-inner">
+              <span class="face front"><span id="frontGroup" class="badge"></span><span id="frontTerm" class="jp"></span><span class="hint">Chạm để xem nghĩa</span></span>
+              <span class="face back"><span id="backGroup" class="badge"></span><span id="backTerm" class="jp"></span><span id="meaning" class="meaning"></span><span id="speaker" class="speaker" role="button">🔊 Nghe lại</span><span class="hint">Chạm thẻ để quay lại</span></span>
+            </span>
+          </button>
+        </div>
+        <div class="controls"><button id="prev" class="control">← Trước</button><button id="learn" class="control learn">☆ Đánh dấu đã học</button><button id="next" class="control">Sau →</button></div>
+        <p class="small-note">Khi lật mặt sau, app tự đọc từ tiếng Nhật. Furigana chỉ để nhìn và không được đưa vào nội dung loa đọc. Tiến độ được nhớ trên máy này.</p>
+      </div>
+    </section>
+
+    <section id="list" class="panel">
+      <div class="box">
+        <div class="list-head"><input id="search" class="search" type="search" placeholder="Tìm tiếng Nhật hoặc nghĩa tiếng Việt…"><div id="listSummary" class="summary"></div></div>
+        <div id="sections"></div>
+      </div>
+    </section>
+  </main>
+  <button id="top" class="topbtn" aria-label="Lên đầu trang">↑</button>
+
+  <script>
+  const groups = [
+    {id:'p1', title:'I. Tên các bộ phận và từ cơ bản trong xe'},
+    {id:'p2', title:'II. Từ vựng và thao tác khi lái xe'},
+    {id:'p3', title:'III. Một số bài học trong quá trình lái xe'},
+    {id:'p4', title:'IV-A. Các bộ phận điều khiển quan trọng'},
+    {id:'p5', title:'IV-B. Vị trí bàn đạp và chân sử dụng'},
+    {id:'p6', title:'IV-C. Cần số xe MT (xe số sàn)'},
+    {id:'p7', title:'IV-D. Cần số xe AT (xe số tự động)'}
+  ];
+  const R=(base,reading)=>({base,reading});
+  const raw = [
+    ['p1',[R('鍵','かぎ')],'かぎ','Chìa khóa / khóa cửa'],
+    ['p1',['バックミラー'],'バックミラー','Gương chiếu hậu bên trong'],
+    ['p1',['キャニスター'],'キャニスター','Hộp nhỏ đựng đồ'],
+    ['p1',['ハンドル'],'ハンドル','Vô lăng'],
+    ['p1',['カーテン・',R('幕','まく')],'カーテン、まく','Rèm che'],
+    ['p1',['ウインドシールドワイパー'],'ウインドシールドワイパー','Cần gạt kính chắn gió'],
+    ['p1',['ドライブシャフト'],'ドライブシャフト','Trục truyền động'],
+    ['p1',['ホイッスル'],'ホイッスル','Còi / tiếng còi'],
+    ['p1',[R('軸','じく')],'じく','Trục'],
+    ['p1',['キー'],'キー','Chìa khóa xe'],
+    ['p1',[R('非常','ひじょう'),'ブレーキ'],'ひじょうブレーキ','Phanh khẩn cấp'],
+    ['p1',['シート'],'シート','Ghế ngồi'],
+    ['p1',['ステアリング'],'ステアリング','Tay lái / vô lăng'],
+    ['p1',['スイッチボード'],'スイッチボード','Bảng điều khiển'],
+    ['p1',['シフト'],'シフト','Cần số / chuyển số'],
+    ['p1',['エンジンブレーキ'],'エンジンブレーキ','Phanh động cơ'],
+    ['p1',['アクセル'],'アクセル','Chân ga / ga'],
+    ['p1',['ナンバープレート'],'ナンバープレート','Biển số xe'],
+    ['p1',['バックライト'],'バックライト','Đèn phía sau'],
+    ['p1',['テールライト'],'テールライト','Đèn hậu'],
+    ['p1',['リヤシート'],'リヤシート','Ghế sau'],
+    ['p1',['ヘッドレスト'],'ヘッドレスト','Tựa đầu'],
+    ['p1',[R('車輪','しゃりん')],'しゃりん','Bánh xe'],
+    ['p1',['カーボディ'],'カーボディ','Thân xe / cabin'],
+    ['p1',['ヘッドライト'],'ヘッドライト','Đèn pha'],
+    ['p1',['ウインカー'],'ウインカー','Đèn xi nhan'],
+    ['p1',['タイヤ'],'タイヤ','Lốp xe'],
+    ['p1',['サイドミラー'],'サイドミラー','Gương chiếu hậu bên ngoài'],
+
+    ['p2',[R('発進','はっしん')],'はっしん','Khởi hành / xuất phát'],
+    ['p2',[R('停止','ていし')],'ていし','Dừng lại'],
+    ['p2',[R('左折','させつ')],'させつ','Rẽ trái'],
+    ['p2',[R('右折','うせつ')],'うせつ','Rẽ phải'],
+    ['p2',[R('合図','あいず')],'あいず','Ra hiệu / xi nhan'],
+    ['p2',[R('外周','がいしゅう')],'がいしゅう','Vòng ngoài'],
+    ['p2',[R('内周','ないしゅう')],'ないしゅう','Vòng trong'],
+    ['p2',[R('坂道','さかみち')],'さかみち','Đường dốc'],
+    ['p2',['カーブ'],'カーブ','Đường cong / khúc cua'],
+    ['p2',[R('信号','しんごう')],'しんごう','Đèn tín hiệu'],
+    ['p2',['シートベルト'],'シートベルト','Dây an toàn'],
+    ['p2',[R('徐行','じょこう')],'じょこう','Đi chậm, sẵn sàng dừng ngay'],
+    ['p2',[R('路側帯','ろそくたい')],'ろそくたい','Lề đường / dải ven đường'],
+    ['p2',[R('歩道','ほどう')],'ほどう','Vỉa hè'],
+    ['p2',[R('歩行者','ほこうしゃ')],'ほこうしゃ','Người đi bộ'],
+    ['p2',[R('踏切','ふみきり')],'ふみきり','Đường ngang giao với đường sắt'],
+    ['p2',['パーキング'],'パーキング','Đỗ xe / số P'],
+    ['p2',['ハンドブレーキ'],'ハンドブレーキ','Phanh tay'],
+    ['p2',['エンジンをかける'],'エンジンをかける','Khởi động động cơ'],
+    ['p2',['アクセルを',R('踏','ふ'),'む'],'アクセルをふむ','Đạp ga'],
+    ['p2',['バックミラーで',R('確認','かくにん'),'する'],'バックミラーでかくにんする','Kiểm tra bằng gương chiếu hậu'],
+    ['p2',['ブレーキをかける'],'ブレーキをかける','Đạp / sử dụng phanh'],
+    ['p2',[R('急','きゅう'),'ブレーキ'],'きゅうブレーキ','Phanh gấp'],
+    ['p2',['ライトをつける'],'ライトをつける','Bật đèn'],
+    ['p2',['ワイパーを',R('動','うご'),'かす'],'ワイパーをうごかす','Bật / vận hành cần gạt nước'],
+    ['p2',[R('高速道路','こうそくどうろ'),'に',R('乗','の'),'る'],'こうそくどうろにのる','Đi vào đường cao tốc'],
+
+    ['p3',[R('発進','はっしん')],'はっしん','Khởi hành'],
+    ['p3',[R('横断歩道','おうだんほどう'),'の',R('前','まえ'),'に',R('停止','ていし')],'おうだんほどうのまえにていし','Dừng trước vạch người đi bộ'],
+    ['p3',[R('坂道停止','さかみちていし')],'さかみちていし','Dừng ngang dốc'],
+    ['p3',[R('坂道発進','さかみちはっしん')],'さかみちはっしん','Khởi hành ngang dốc'],
+    ['p3',['クランク'],'クランク','Lái trong đường vuông góc'],
+    ['p3',[R('信号機','しんごうき'),'を',R('渡','わた'),'る'],'しんごうきをわたる','Đi qua giao lộ có đèn tín hiệu'],
+    ['p3',[R('並列駐車','へいれつちゅうしゃ')],'へいれつちゅうしゃ','Đỗ xe song song'],
+    ['p3',[R('踏切停止','ふみきりていし')],'ふみきりていし','Dừng trước đường tàu'],
+    ['p3',['シフト',R('変更','へんこう')],'シフトへんこう','Thay đổi số'],
+    ['p3',[R('縦列駐車','じゅうれつちゅうしゃ')],'じゅうれつちゅうしゃ','Ghép xe / đỗ xe dọc'],
+
+    ['p4',[R('運転装置','うんてんそうち')],'うんてんそうち','Thiết bị điều khiển xe'],
+    ['p4',['ハンドブレーキ'],'ハンドブレーキ','Phanh tay'],
+    ['p4',['チェンジレバー'],'チェンジレバー','Cần số'],
+    ['p4',['クラッチペダル'],'クラッチペダル','Chân côn'],
+    ['p4',['ブレーキペダル'],'ブレーキペダル','Chân phanh'],
+    ['p4',['アクセルペダル'],'アクセルペダル','Chân ga'],
+    ['p4',['ライトスイッチ'],'ライトスイッチ','Núm bật/tắt đèn'],
+    ['p4',['エンジンスイッチ'],'エンジンスイッチ','Công tắc / chìa khóa khởi động'],
+    ['p4',[R('方向指示器','ほうこうしじき'),'レバー'],'ほうこうしじきレバー','Cần xi nhan'],
+    ['p4',[R('警音器','けいおんき'),'スイッチ'],'けいおんきスイッチ','Nút còi xe'],
+    ['p4',['ハンドル'],'ハンドル','Vô lăng'],
+    ['p4',['ワイパースイッチ'],'ワイパースイッチ','Cần gạt nước'],
+
+    ['p5',['クラッチペダル'],'クラッチペダル','Chân côn (chỉ xe số sàn)'],
+    ['p5',['ブレーキペダル'],'ブレーキペダル','Chân phanh'],
+    ['p5',['アクセルペダル'],'アクセルペダル','Chân ga'],
+    ['p5',[R('左足','ひだりあし'),'で',R('踏','ふ'),'む'],'ひだりあしでふむ','Đạp bằng chân trái'],
+    ['p5',[R('右足','みぎあし'),'で',R('踏','ふ'),'む'],'みぎあしでふむ','Đạp bằng chân phải'],
+    ['p5',[R('踏','ふ'),'み',R('替','か'),'えない'],'ふみかえない','Không đổi chân đạp'],
+
+    ['p6',['チェンジレバー'],'チェンジレバー','Cần số xe số sàn'],
+    ['p6',['ローギア'],'ローギア','Số 1'],
+    ['p6',['セカンドギア'],'セカンドギア','Số 2'],
+    ['p6',['サードギア'],'サードギア','Số 3'],
+    ['p6',['トップギア'],'トップギア','Số 4'],
+    ['p6',['オーバートップギア'],'オーバートップギア','Số 5'],
+    ['p6',['リバースギア（バックギア）'],'リバースギア、バックギア','Số lùi'],
+    ['p6',['ニュートラル'],'ニュートラル','Số mo (N)'],
+    ['p6',[R('力','ちから')],'ちから','Lực'],
+    ['p6',[R('速度','そくど')],'そくど','Tốc độ'],
+    ['p6',[R('強','つよ'),'い'],'つよい','Mạnh'],
+    ['p6',[R('弱','よわ'),'い'],'よわい','Yếu'],
+    ['p6',[R('速','はや'),'い'],'はやい','Nhanh'],
+    ['p6',[R('遅','おそ'),'い'],'おそい','Chậm'],
+    ['p6',[R('押','お'),'す'],'おす','Đẩy / ấn'],
+    ['p6',[R('引','ひ'),'き',R('下','さ'),'げる'],'ひきさげる','Kéo xuống'],
+    ['p6',[R('操作','そうさ'),'する'],'そうさする','Thao tác / điều khiển'],
+
+    ['p7',['チェンジレバー'],'チェンジレバー','Cần số xe tự động'],
+    ['p7',['チェンジレバーボタン'],'チェンジレバーボタン','Nút trên cần số'],
+    ['p7',['オーバードライブスイッチ'],'オーバードライブスイッチ','Nút tắt/bật overdrive'],
+    ['p7',['パーキング（P）'],'パーキング','Số P - đỗ xe'],
+    ['p7',['リバース（R）'],'リバース','Số R - lùi xe'],
+    ['p7',['ニュートラル（N）'],'ニュートラル','Số N - số mo'],
+    ['p7',['ドライブ（D）'],'ドライブ','Số D - chạy bình thường'],
+    ['p7',['セカンド（2）'],'セカンド','Số 2 - dùng khi cần phanh động cơ'],
+    ['p7',['ロー（L）'],'ロー','Số L - dốc lớn, cần lực kéo mạnh'],
+    ['p7',[R('停止中','ていしちゅう')],'ていしちゅう','Khi đang dừng'],
+    ['p7',[R('走行中','そうこうちゅう')],'そうこうちゅう','Khi đang chạy'],
+    ['p7',['ブレーキをしっかり',R('踏','ふ'),'む'],'ブレーキをしっかりふむ','Đạp chắc chân phanh'],
+    ['p7',[R('目','め'),'で',R('確認','かくにん'),'する'],'めでかくにんする','Nhìn để xác nhận'],
+    ['p7',[R('顔','かお'),'は',R('前','まえ'),'を',R('向','む'),'いたまま'],'かおはまえをむいたまま','Giữ mặt hướng về phía trước']
+  ];
+
+  const vocab = raw.map((x,i)=>({id:'v'+i,group:x[0],parts:x[1],speak:x[2],vi:x[3],plain:x[1].map(p=>typeof p==='string'?p:p.base).join('')}));
+  const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+  const groupMap=Object.fromEntries(groups.map(g=>[g.id,g]));
+  const renderParts=parts=>parts.map(p=>typeof p==='string'?escapeHTML(p):`<ruby>${escapeHTML(p.base)}<rt>${escapeHTML(p.reading)}</rt></ruby>`).join('');
+  const escapeHTML=s=>String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  let learned=new Set(JSON.parse(localStorage.getItem('drivingVocabLearned')||'[]'));
+  let pool=[...vocab], index=0, flipped=false;
+  let japaneseVoice=null;
+  function loadVoices(){const vs=speechSynthesis.getVoices();japaneseVoice=vs.find(v=>/^ja[-_]/i.test(v.lang)&&/Google|Kyoko|O-Ren|Nanami|Japanese/i.test(v.name))||vs.find(v=>/^ja[-_]/i.test(v.lang))||null}
+  if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices}
+  function speak(text){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='ja-JP';u.rate=.82;u.pitch=1;if(japaneseVoice)u.voice=japaneseVoice;speechSynthesis.speak(u)}
+  function setFlipped(value,auto=false){flipped=value;$('#flashcard').classList.toggle('flipped',value);if(value&&auto)setTimeout(()=>speak(pool[index].speak),180)}
+  function updateCard(){if(!pool.length)return;const v=pool[index];const html=renderParts(v.parts);$('#frontTerm').innerHTML=html;$('#backTerm').innerHTML=html;$('#meaning').textContent=v.vi;$('#frontGroup').textContent=groupMap[v.group].title;$('#backGroup').textContent=`${index+1}/${pool.length} • ${groupMap[v.group].title}`;const done=learned.has(v.id);$('#learn').classList.toggle('done',done);$('#learn').textContent=done?'✓ Đã học':'☆ Đánh dấu đã học';const completed=pool.filter(x=>learned.has(x.id)).length;$('#progressText').textContent=`${index+1}/${pool.length} • Đã học ${completed}`;$('#progressBar').style.width=`${pool.length?completed/pool.length*100:0}%`;setFlipped(false)}
+  function change(n){index=(index+n+pool.length)%pool.length;updateCard()}
+  function filterCards(){const id=$('#cardSection').value;pool=id==='all'?[...vocab]:vocab.filter(v=>v.group===id);index=0;updateCard()}
+  $('#cardSection').innerHTML='<option value="all">Tất cả các phần</option>'+groups.map(g=>`<option value="${g.id}">${g.title}</option>`).join('');
+  $('#flashcard').addEventListener('click',e=>{if(e.target.closest('#speaker')){e.stopPropagation();speak(pool[index].speak);return}setFlipped(!flipped,!flipped)});
+  $('#prev').onclick=()=>change(-1);$('#next').onclick=()=>change(1);$('#cardSection').onchange=filterCards;
+  $('#shuffle').onclick=()=>{for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}index=0;updateCard()};
+  $('#learn').onclick=()=>{const id=pool[index].id;learned.has(id)?learned.delete(id):learned.add(id);localStorage.setItem('drivingVocabLearned',JSON.stringify([...learned]));updateCard()};
+  $$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.toggle('active',x===b));$$('.panel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.tab));if(b.dataset.tab==='list')renderList()});
+  function renderList(){const q=$('#search').value.trim().toLocaleLowerCase('ja');let total=0;const out=groups.map(g=>{const items=vocab.filter(v=>v.group===g.id&&(v.plain.toLocaleLowerCase('ja').includes(q)||v.speak.toLocaleLowerCase('ja').includes(q)||v.vi.toLocaleLowerCase('vi').includes(q)));if(!items.length)return'';total+=items.length;return `<section class="section"><h2 class="section-title"><span>${g.title}</span><span class="count">${items.length} từ</span></h2><ul class="vocab-list">${items.map(v=>`<li class="vocab-item"><div><div class="term">${renderParts(v.parts)}</div><div class="vi">${escapeHTML(v.vi)}</div></div><button class="play" data-speak="${escapeHTML(v.speak)}" aria-label="Đọc ${escapeHTML(v.plain)}">🔊</button></li>`).join('')}</ul></section>`}).join('');$('#sections').innerHTML=out||'<div class="empty">Không tìm thấy từ phù hợp.</div>';$('#listSummary').textContent=`Hiển thị ${total}/${vocab.length} mục`;$$('.play').forEach(b=>b.onclick=()=>speak(b.dataset.speak))}
+  $('#search').oninput=renderList;
+  window.addEventListener('scroll',()=>$('#top').classList.toggle('show',scrollY>500));$('#top').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  updateCard();renderList();
+  </script>
+</body>
+</html>
