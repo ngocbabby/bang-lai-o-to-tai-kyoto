@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6cf68">
+<title>Honmen 95 - Luyện thi bằng lái Nhật</title>
+<meta name="description" content="App luyện thi Honmen bằng tiếng Việt, có tiếng Nhật gốc, chấm theo mốc 95/100 và lưu câu sai.">
+<link rel="stylesheet" href="assets/honmen95/app.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+ <div class="brand"><div class="brandmark">🚗</div><div>HONMEN 95<div class="tiny">Mục tiêu 95/100</div></div></div>
+ <div class="topactions"><button class="iconbtn" id="resetBtn" title="Xóa dữ liệu học">↻</button></div>
+</header>
+
+<section id="home" class="view active">
+ <div class="hero">
+  <div class="road"></div><div class="tag">🏁 Nước rút đến ngày thi 12/08</div>
+  <h1>Lái chắc kiến thức, về đích 95 điểm.</h1>
+  <p>Đề Honmen tiếng Việt, có tiếng Nhật gốc phía trên để dò sách. Câu hình đã được cắt riêng từ PDF, không dùng nguyên trang scan.</p>
+  <div class="cta"><button class="btn primary" data-action="daily">Học hôm nay</button><button class="btn soft" data-action="exam">Thi thử đủ 95 câu</button></div>
+  <svg class="heroart" viewBox="0 0 360 250" aria-hidden="true"><g fill="none" stroke="#5b4930" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="108" cy="196" r="24" fill="#fff8df"/><circle cx="278" cy="196" r="24" fill="#fff8df"/><path d="M58 185h250l-16-64c-4-16-17-27-33-27h-84l-38 46H79c-16 0-29 13-29 29v8c0 5 3 8 8 8z" fill="#fff6d1"/><path d="M145 138l34-40h75l28 40z" fill="#a8c6d8"/><circle cx="75" cy="52" r="25" fill="#ffe8a0"/><path d="M50 50c3-31 46-39 53-5-14 1-25-3-34-11-2 10-8 15-19 16z" fill="#6d4b34"/><path d="M78 80v44M78 99l-24 35M78 100l31 26M54 134l-10 47M109 126l16 51"/><circle cx="184" cy="58" r="22" fill="#ffe8a0"/><path d="M164 54c4-27 41-30 45 0-14-1-26-7-34-16-1 8-4 13-11 16z" fill="#5e4936"/><path d="M184 80v54M184 98l-29 28M184 100l28 27"/></g></svg>
+ </div>
+ <div class="appScope card">
+  <div><span class="scopeTag">BẢN HỌC THẬT - KHÔNG PHẢI TRANG DEMO</span><h2>App dẫn bạn đi theo đúng thứ tự: học lõi → luyện theo chủ đề → làm đề → ôn câu sai.</h2></div>
+  <div class="scopeGrid">
+   <div><b>8</b><span>chặng giáo trình</span></div><div><b>95</b><span>câu đề Honmen 01</span></div><div><b>5</b><span>tình huống có ảnh</span></div><div><b>95+</b><span>mốc cần đạt</span></div>
+  </div>
+  <p>Giáo trình được chắt từ mục lục và nội dung của bộ <b>Lý thuyết 125cc và ô tô trang 1–282</b>; phần luyện câu lấy từ <b>10 đề ôn.pdf</b>. Những mục cơ bản của giai đoạn 1 vẫn được giữ lại khi chúng xuất hiện trong đề Honmen.</p>
+ </div>
+ <div class="sectiontitle"><h2>Lộ trình đến ngày thi</h2><span id="roadmapStatus"></span></div>
+ <div id="roadmap" class="roadmap"></div>
+ <div class="sectiontitle"><h2>Hôm nay học gì?</h2><span id="daysLeft"></span></div>
+ <div class="grid">
+  <button class="card task" style="text-align:left" data-action="daily"><div class="taskicon">☀️</div><div><h3>Gói học 20 câu</h3><p>Ưu tiên câu sai, câu chưa chắc và chủ đề yếu.</p></div></button>
+  <button class="card task" style="text-align:left" data-action="wrong"><div class="taskicon">🔁</div><div><h3>Ôn câu sai</h3><p><b id="wrongCountHome">0</b> câu đang chờ ôn lại.</p></div></button>
+  <button class="card task" style="text-align:left" data-action="scenario"><div class="taskicon">🖼️</div><div><h3>Luyện 5 câu tình huống</h3><p>Cắt hình riêng, trả lời 3 nhận định cho mỗi tình huống.</p></div></button>
+  <button class="card task" style="text-align:left" data-action="exam"><div class="taskicon">🏁</div><div><h3>Thi thử 50 phút</h3><p>90 câu thường + 5 câu hình, đạt từ 95/100.</p></div></button>
+ </div>
+ <div class="sectiontitle"><h2>Tiến độ của bạn</h2><span>Lưu ngay trên máy</span></div>
+ <div class="grid">
+  <div class="card"><div class="tiny">Điểm cao nhất</div><div class="scorebig" id="bestScore">--</div><div class="meter"><i id="bestMeter" style="width:0"></i></div><div class="statrow"><div class="statpill"><b id="attempts">0</b><small>Lần thi</small></div><div class="statpill"><b id="bookmarks">0</b><small>Chưa chắc</small></div></div></div>
+  <div class="card"><div class="tiny">Trạng thái nội dung</div><h3 style="margin:5px 0">Đề Honmen 01 đã sẵn sàng</h3><p style="margin:0;color:var(--muted)">Đã nhập đủ 90 câu đúng/sai và 5 câu tình huống từ PDF. Đề 02–05 đang tiếp tục bóc tách.</p><div class="notice">Nhật gốc được nhận dạng từ bản scan; phần tiếng Việt và đáp án được ưu tiên theo đúng tài liệu nguồn.</div></div>
+ </div>
+</section>
+
+<section id="learn" class="view">
+ <div class="curriculumHero">
+  <span class="scopeTag">GIÁO TRÌNH CHẮT LỌC HONMEN</span>
+  <h1>Không đọc 282 trang theo thứ tự. Học 8 chặng đúng trọng tâm đề.</h1>
+  <p>Mỗi chặng ghi rõ trang sách gốc, điểm phải nắm và nhóm câu luyện tương ứng. Hoàn thành lần lượt từ 1 đến 8; khi sai câu nào, quay lại đúng chặng đó.</p>
+ </div>
+ <div class="sectiontitle"><h2>8 chặng kiến thức</h2><span id="curriculumProgress">0/8 đã học</span></div>
+ <div id="curriculumCards" class="curriculumGrid"></div>
+ <div id="lessonPanel" class="lessonPanel hidden"></div>
+ <div class="sectiontitle"><h2>Luyện nhanh theo cách bạn cần</h2><span>Đề Honmen 01</span></div>
+ <div class="examlist">
+  <button class="examitem" data-action="daily"><div class="num">20</div><div class="grow"><h3>Gói học hôm nay</h3><p>Câu sai → câu chưa chắc → câu mới.</p></div><b>›</b></button>
+  <button class="examitem" data-action="allPractice"><div class="num">90</div><div class="grow"><h3>Luyện toàn bộ câu thường</h3><p>Biết đúng sai và xem giải thích ngay.</p></div><b>›</b></button>
+  <button class="examitem" data-action="scenario"><div class="num">5</div><div class="grow"><h3>Câu tình huống có hình</h3><p>Mỗi tình huống đúng cả 3 ý mới được 2 điểm.</p></div><b>›</b></button>
+  <button class="examitem" data-action="bookmarked"><div class="num">★</div><div class="grow"><h3>Câu đã đánh dấu chưa chắc</h3><p>Ôn lại dù lần trước bạn trả lời đúng.</p></div><b>›</b></button>
+ </div>
+ <div class="sectiontitle"><h2>Nhóm câu trong đề</h2><span id="topicSummary"></span></div>
+ <div id="topicCards" class="grid"></div>
+</section>
+
+<section id="exams" class="view">
+ <div class="sectiontitle"><h2>Đề thi Honmen</h2><span>Đạt từ 95/100</span></div>
+ <div class="examlist">
+  <button class="examitem" data-action="exam"><div class="num">01</div><div class="grow"><h3>Đề Honmen 01</h3><p>95 câu · 50 phút · tiếng Việt + Nhật gốc.</p></div><b>Bắt đầu</b></button>
+  <div class="examitem disabled"><div class="num">02</div><div class="grow"><h3>Đề Honmen 02</h3><p>Đang bóc tách từ PDF.</p></div><b>Khóa</b></div>
+  <div class="examitem disabled"><div class="num">03</div><div class="grow"><h3>Đề Honmen 03</h3><p>Đang bóc tách từ PDF.</p></div><b>Khóa</b></div>
+  <div class="examitem disabled"><div class="num">04</div><div class="grow"><h3>Đề Honmen 04</h3><p>Đang bóc tách từ PDF.</p></div><b>Khóa</b></div>
+  <div class="examitem disabled"><div class="num">05</div><div class="grow"><h3>Đề Honmen 05</h3><p>Đang bóc tách từ PDF.</p></div><b>Khóa</b></div>
+ </div>
+</section>
+
+<section id="wrong" class="view">
+ <div class="sectiontitle"><h2>Câu sai & chưa chắc</h2><span id="wrongSummary"></span></div>
+ <div class="grid"><button class="card task" style="text-align:left" data-action="wrong"><div class="taskicon">❌</div><div><h3>Ôn câu sai</h3><p id="wrongIntro">Chưa có câu sai.</p></div></button><button class="card task" style="text-align:left" data-action="bookmarked"><div class="taskicon">★</div><div><h3>Ôn câu chưa chắc</h3><p id="bookmarkIntro">Chưa có câu đánh dấu.</p></div></button></div>
+ <div class="sectiontitle"><h2>Danh sách gần đây</h2></div><div id="wrongList" class="wronglist"></div>
+</section>
+
+<section id="stats" class="view">
+ <div class="sectiontitle"><h2>Tiến độ</h2><span>Thi đậu khi ≥95</span></div>
+ <div id="history"></div>
+ <div class="sectiontitle"><h2>Chủ đề cần củng cố</h2></div><div id="topicStats" class="card"></div>
+ <p class="footerNote">Nguồn duy nhất: bộ “Lý thuyết 125cc và ô tô trang 1–282” và “10 đề ôn.pdf”. Không bổ sung câu ngoài tài liệu.</p>
+</section>
+
+<section id="quiz" class="view"><div class="questionShell"><div class="quizhead"><div class="quizheadin"><button class="back" id="quitQuiz">‹</button><div class="progresswrap"><div class="quizmeta"><span id="quizCounter">Câu 1/20</span><span id="quizMode"></span></div><div class="progressline"><i id="quizProgress"></i></div></div><div id="timer" class="timer hidden">50:00</div><button class="iconbtn" id="paletteBtn">▦</button></div></div><div id="questionMount"></div></div></section>
+<section id="result" class="view"><div class="questionShell"><div id="resultMount"></div></div></section>
+</div>
+
+<nav class="bottomnav" id="bottomnav"><button class="navbtn active" data-view="home"><span>🏠</span>Hôm nay</button><button class="navbtn" data-view="learn"><span>📚</span>Giáo trình</button><button class="navbtn" data-view="exams"><span>📝</span>Đề thi</button><button class="navbtn" data-view="wrong"><span>🔁</span>Câu sai</button><button class="navbtn" data-view="stats"><span>📊</span>Tiến độ</button></nav>
+<div id="modal" class="modal"><div class="sheet"><div class="sheethead"><h2>Danh sách câu</h2><button class="close" id="closeModal">×</button></div><div id="palette" class="palette"></div></div></div>
+<script>window.HONMEN_IMAGES={};</script>
+<script src="assets/honmen95/images-regular.js"></script>
+<script src="assets/honmen95/images-s91.js"></script>
+<script src="assets/honmen95/images-s92.js"></script>
+<script src="assets/honmen95/images-s93.js"></script>
+<script src="assets/honmen95/images-s94.js"></script>
+<script src="assets/honmen95/images-s95.js"></script>
+<script src="assets/honmen95/data.js"></script>
+<script src="assets/honmen95/app.js"></script>
+</body></html>
