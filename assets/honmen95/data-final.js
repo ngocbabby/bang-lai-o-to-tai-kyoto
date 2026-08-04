@@ -1,0 +1,5 @@
+window.HONMEN_DATA={
+  regular:window.HONMEN_REGULAR||[],
+  scenarios:window.HONMEN_SCENARIOS||[],
+  images:window.HONMEN_IMAGES||{}
+};
